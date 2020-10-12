@@ -280,6 +280,7 @@ body {
     color: #fff;
     box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.5);
+    background-color: #ffd700;
 }
 
 .layered-effect div:hover span:nth-child(5) {
@@ -305,8 +306,4 @@ body {
 .layered-effect div:hover span:nth-child(1) {
     transform: translate(0px, 0px);
     opacity: 0.2;
-}
-
-.layered-effect div:hover span {
-    background-color: #ffd700;
 }
