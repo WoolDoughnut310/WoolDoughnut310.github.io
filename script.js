@@ -87,15 +87,17 @@ function load_home() {
 }
 
 function resize_handler() {
-    let image = element.querySelector('img');
-    let overlay = element.querySelector('span');
+    document.querySelectorAll('#site-home .row .col').forEach(element => {
+        let image = element.querySelector('img');
+        let overlay = element.querySelector('span');
 
-    if (image.style.display === 'none') {
-        return false;
-    }
+        if (image.style.display === 'none') {
+            return false;
+        }
 
-    overlay.style.width = image.offsetWidth + "px";
-    overlay.style.height = image.offsetHeight + "px";
+        overlay.style.width = image.offsetWidth + "px";
+        overlay.style.height = image.offsetHeight + "px";
+    });1
 }
 
 window.onresize = resize_handler;
