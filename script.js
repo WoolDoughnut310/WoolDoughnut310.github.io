@@ -80,8 +80,16 @@ function hide_pages() {
     })
 }
 
+function setTitle(name="") {
+    if (name !== "") {
+        document.title = "J.N.'s WW1 | ".concat(name);
+    } else {
+        document.title = "J.N.'s WW1";
+    }
+}
+
 function load_home() {
-    load_site();
+    setTitle();
     document.querySelector('#home-view').style.removeProperty('display');
     document.querySelector('#site-view').style.display = 'none';
 }
@@ -103,6 +111,7 @@ function resize_handler() {
 window.onresize = resize_handler;
 
 function load_site_home() {
+    setTitle('Home');
     document.querySelector('#content').style.display = 'none';
     document.querySelector('#site-home').style.removeProperty('display');
 
@@ -143,7 +152,7 @@ function load_site() {
 }
 
 function load_content(name) {
-    document.title = name;
+    setTitle(name);
     hide_pages();
 
     document.querySelector('#site-home').style.display = 'none';
