@@ -98,6 +98,8 @@ function resize_handler() {
     overlay.style.height = image.offsetHeight + "px";
 }
 
+window.onresize = resize_handler;
+
 function load_site_home() {
     document.querySelector('#content').style.display = 'none';
     document.querySelector('#site-home').style.removeProperty('display');
