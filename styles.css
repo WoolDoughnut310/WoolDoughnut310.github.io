@@ -192,6 +192,7 @@ body {
 
 #content-images img {
     margin-top: 60px;
+    border-radius: 60px;
 }
 
 .info-card {
